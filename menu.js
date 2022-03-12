@@ -153,11 +153,13 @@ const foodArr = [
     your food objects has.
 */
 
-const foodFn = function() {
-    if(foodArr.tags === 'Entree') {
-        console.log('some')
-    }
-        return foodArr.name
+const foodFn = () => {
+    const forEachFn = foodArr.forEach(function(element, index){
+        if(element.tags.includes('Entree')) {
+            return index
+        }
+    })
+    return foodArr
 }
 
 const filteredFood = foodArr.filter(foodFn)
@@ -203,8 +205,12 @@ const filteredFood = foodArr.filter(foodFn)
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+const filterByProperty = (property, number, type) => {
+    let filteredArr = []
 
+    foodArr.filter(function(element) {
+    })
+}
 
 /*
     Invoke the `filterByProperty` function passing
