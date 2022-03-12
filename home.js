@@ -66,7 +66,7 @@ function canWeDeliver(zipCode) {
     return zipCode
 }
 
-canWeDeliver(85205)
+canWeDeliver(85545)
 
 
 
@@ -132,11 +132,9 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-const changeDeals = deals.map(function(title, index){
-    return deals.splice(title[0], 1, '10% Off!')
-})
+const newDeals = deals[0].title.replace('15% Off!', '10% Off!')
 
-console.log(changeDeals)
+console.log(newDeals)
 
 /*
     The restaurant is going to continue its
@@ -151,3 +149,6 @@ console.log(changeDeals)
     to be displaying wrong on the live site.
 */
 
+const newSecondDeal = deals[1].desc.replace('   This deal lasts until the end of March! ', 'This deal lasts until the end of April!')
+
+console.log(newSecondDeal)
